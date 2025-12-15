@@ -24,7 +24,6 @@ body {
 .resume-container {
   width: 1280px;
   height: 100%;
-  /* border: 2px solid pink; */
   background-color: #f5f5dc;
   margin: 40px auto;
   position: relative;
@@ -128,10 +127,6 @@ body {
   gap: 12px;
   line-height: 1.8;
   margin-top: 30px;
-
-  /* position: absolute;
-  top: 0;
-  left: 0; */
 }
 .about-me-title {
   font-size: 23px;
@@ -198,7 +193,6 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  /* margin-left: auto; */
 }
 .question-icon {
   width: 38px;
