@@ -152,12 +152,22 @@ body {
 .notion-link {
   width: 300px;
 }
-.projects {
-  line-height: 1.5;
+.bi-github {
+  background-color: #2c2c2c;
+  color: white;
+  border-radius: 100%;
+  border: 1px solid #f0f6fc;
+  width: 40px;
+  height: 40px;
+  outline: none;
 }
+.projects {
+  line-height: 1.8;
+}
+
 .projects-list:hover {
   text-decoration: underline;
-  color: #0056b3;
+  color: #c198f3;
 }
 
 .strengths-list-top {
