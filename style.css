@@ -6,41 +6,140 @@
   font-display: swap;
 }
 @media (max-width: 768px) {
-  body {
-    padding: 0 16px;
-  }
   .resume-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 0 16px;
     max-width: 393px;
-    flex: 1 1 200px;
-    display: flex;
   }
-  .slogan {
-    font-size: 16px;
+  /* 헤더 뱃지모양 이름, 슬로건, 정보 */
+  div.header {
+    gap: 10px;
     width: 364px;
-    height: 70px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
   }
-}
+  div.header-name {
+    width: 55px;
+    height: 60px;
+    border: 2px solid black;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  div.slogan {
+    font-size: 15px;
+    width: 105px;
+  }
 
-/* 768 이하 (모바일)
-@media (max-width: 768px) {
-  body {
-    padding: 0 16px;
+  div.information {
+    gap: 5px;
+    /* margin-top: 20px; */
   }
-  .resume-container {
+  div.info-title {
+    font-size: 10px;
+  }
+  div.info-content {
+    font-size: 10px;
+  }
+  /* -------------------------------- */
+  /* 영어, 한글 이름 */
+  div.main-name {
+    max-width: 290px;
+    height: 20px;
+    gap: 10px;
+  }
+  h2.english-name {
+    font-size: 30px;
+    width: 190px;
+  }
+  h2.korea-name {
+    font-size: 30px;
+    width: 85px;
+  }
+  /* ---------------------------- */
+  /* 중간부분 이미지, 학력, 경험 */
+  div.main {
+    gap: 20px;
+  }
+  h2.list-heading {
+    font-size: 16px;
+  }
+  p.list:not(:last-child)::after {
+    width: 1px;
+    height: 15px;
+  }
+  p.list {
+    font-size: 11px;
+    width: 70px;
+    padding: 0 5px;
+  }
+  img.photo {
+    width: 100%;
+    height: auto;
+  }
+  /* -------------------------- */
+  /* 자기소개 글 */
+  h2.about-me-title {
+    font-size: 16px;
+  }
+  span.about-me-comment {
+    font-size: 13px;
+  }
+  /* -------------------------- */
+  /* 하단부분 프로젝트, 강점 */
+  div.footer {
+    gap: 15px;
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
   }
-  .header {
-    font-size: 16px;
-    max-width: 364px;
-    flex: 1 1 300px;
-    display: flex;
-    padding: 0 16px;
+  h3.footer-sub-title {
+    font-size: 13px;
+    margin-top: 5px;
   }
-} */
+  a.projects-list {
+    font-size: 11px;
+  }
+  svg.bi-notion {
+    width: 25px;
+    height: 25px;
+  }
+  svg.bi-github {
+    width: 25px;
+    height: 25px;
+  }
+  /* ----------------------------- */
+  /* 강점 */
+  li.strengths-item {
+    width: 80px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 50px;
+  }
+  button.question-icon {
+    width: 25px;
+    height: 25px;
+  }
+  svg.bi-question-circle-fill {
+    width: 25px;
+    height: 25px;
+  }
+  button.up-icon {
+    width: 25px;
+    height: 25px;
+  }
+  svg.bi-chevron-bar-up {
+    width: 25px;
+    height: 25px;
+  }
+  /* ------------------------------ */
+  /* 제일 바닥 글귀 */
+  div.end-comment {
+    font-size: 8px;
+  }
+}
 
 /* 1024 이하 (태블릿)
 @media (max-width: 1024px) {
@@ -75,7 +174,8 @@ body {
 }
 .header-content {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  /* align-items: center; */
   justify-content: center;
 }
 /* 뱃지 모양 이름 */
@@ -90,6 +190,7 @@ body {
   font-size: 20px;
   font-style: italic;
   font-weight: 500;
+  position: sticky;
 }
 /* 슬로건 */
 .slogan {
@@ -103,7 +204,7 @@ body {
   align-items: center;
   justify-content: flex-end;
   gap: 30px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .info-title {
   font-weight: 800;
@@ -116,7 +217,7 @@ body {
   border: none;
   border-top: 1px solid #000;
   width: 100%;
-  margin: 0;
+  /* margin: 0; */
 }
 /* ----------------------- */
 /* 중간부분 이름, 이미지, 학력, 경험 */
@@ -143,8 +244,8 @@ body {
   margin-top: 15px;
 }
 .photo {
-  width: 240px;
-  height: 320px;
+  max-width: 240px;
+  height: auto;
 }
 /* 학력, 겸험 */
 .main-content {
@@ -200,7 +301,7 @@ body {
 }
 
 .about-me-comment {
-  /* width: 530px; */
+  max-width: 520px;
   font-size: 19px;
   text-align: center;
 }
@@ -219,7 +320,7 @@ body {
   margin-top: 10px;
 }
 .notion-link {
-  width: 300px;
+  max-width: 300px;
 }
 .bi-github {
   background-color: #2c2c2c;
@@ -304,4 +405,8 @@ body {
 }
 .up-icon:active {
   transform: scale(0.9) translateY(0);
+}
+.end-comment {
+  text-align: center;
+  font-size: 13px;
 }
