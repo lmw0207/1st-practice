@@ -56,6 +56,7 @@ body {
   padding: 0;
   font-family: "SchoolSafeBoardMarker";
 }
+/* 전체 영역 */
 .resume-container {
   width: 100%;
   max-width: 1280px;
@@ -77,6 +78,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+/* 뱃지 모양 이름 */
 .header-name {
   width: 141px;
   height: 65px;
@@ -89,11 +91,13 @@ body {
   font-style: italic;
   font-weight: 500;
 }
+/* 슬로건 */
 .slogan {
   font-size: 30px;
   font-style: italic;
   text-align: center;
 }
+/* 정보 */
 .information {
   display: flex;
   align-items: center;
@@ -116,6 +120,7 @@ body {
 }
 /* ----------------------- */
 /* 중간부분 이름, 이미지, 학력, 경험 */
+/* 영어 이름, 한글 이름 */
 .main-name {
   display: flex;
   align-items: center;
@@ -130,7 +135,6 @@ body {
 .korea-name {
   font-size: 55px;
 }
-
 .main {
   display: flex;
   justify-content: center;
@@ -147,6 +151,27 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+.p-plus {
+  display: flex;
+}
+.list {
+  position: relative;
+  width: fit-content;
+  padding: 0 10px;
+  font-size: 19px;
+}
+
+.list:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 15px;
+  background-color: black;
+}
+/* 학력, 겸험 */
 .education-list {
   line-height: 1.8;
 }
@@ -155,7 +180,7 @@ body {
   line-height: 1.8;
 }
 .list-heading {
-  font-size: 23px;
+  font-size: 24px;
   font-weight: 600;
 }
 /* 자기 소개글 */
@@ -169,19 +194,20 @@ body {
   margin-top: 30px;
 }
 .about-me-title {
-  font-size: 23px;
+  font-size: 24px;
   font-weight: 600;
 }
 
 .about-me-comment {
   width: 550px;
+  font-size: 19px;
 }
 /* 하단부분 프로젝트, 강점 */
 .footer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 20px;
+  margin-top: 40px;
   gap: 80px;
 }
 .footer-sub-title {
@@ -210,11 +236,11 @@ body {
   text-decoration: underline;
   color: #c198f3;
 }
-
+/* 강점 */
 .strengths-list-top {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .strengths-list-bottom {
   display: flex;
@@ -238,8 +264,7 @@ body {
 }
 /* 페이지 하단 버튼들 */
 .icon-box {
-  /* display: flex;
-  justify-content: center; */
+  display: flex;
   gap: 5px;
   bottom: 40px;
   position: fixed;
