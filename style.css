@@ -146,6 +146,7 @@ body {
   width: 240px;
   height: 320px;
 }
+/* 학력, 겸험 */
 .main-content {
   display: flex;
   flex-direction: column;
@@ -171,7 +172,7 @@ body {
   height: 15px;
   background-color: black;
 }
-/* 학력, 겸험 */
+
 .education-list {
   line-height: 1.8;
 }
@@ -199,8 +200,9 @@ body {
 }
 
 .about-me-comment {
-  width: 550px;
+  /* width: 530px; */
   font-size: 19px;
+  text-align: center;
 }
 /* 하단부분 프로젝트, 강점 */
 .footer {
