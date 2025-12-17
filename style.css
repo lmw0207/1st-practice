@@ -18,12 +18,10 @@
   div.header {
     gap: 10px;
     width: 364px;
-    margin-bottom: 10px;
-    /* flex-shrink: 0; */
   }
   div.header-name {
     width: 60px;
-    height: 60px;
+    height: 45px;
     border: 2px solid black;
     font-size: 13px;
     font-weight: 500;
@@ -61,7 +59,7 @@
   /* ---------------------------- */
   /* 중간부분 이미지, 학력, 경험 */
   div.main {
-    gap: 20px;
+    gap: 15px;
   }
   h2.list-heading {
     font-size: 16px;
@@ -85,8 +83,8 @@
     padding: 0 5px;
   }
   div.my-img {
-    width: 100%;
-    /* max-width: 190px; */
+    /* width: 100%; */
+    width: 190px;
     height: auto;
   }
   img.photo {
@@ -99,7 +97,12 @@
     font-size: 16px;
   }
   span.about-me-comment {
-    font-size: 13px;
+    font-size: 14px;
+  }
+  div.all-about-me-comment {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
   /* -------------------------- */
   /* 하단부분 프로젝트, 강점 */
@@ -107,11 +110,20 @@
     gap: 15px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 10px;
   }
   h3.footer-sub-title {
     font-size: 13px;
     margin-top: 5px;
+  }
+  /* 프로젝트 */
+  div.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   a.projects-list {
     font-size: 11px;
@@ -126,6 +138,17 @@
   }
   /* ----------------------------- */
   /* 강점 */
+  div.strengths {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 393px;
+    /* flex-wrap: wrap; */
+    /* margin-right: 28px; */
+    gap: 10px;
+  }
+
   li.strengths-item {
     width: 80px;
     height: 25px;
@@ -157,14 +180,14 @@
 
 /* 1024 이하 (태블릿) */
 @media (max-width: 1024px) {
-  .resume-container {
+  div.resume-container {
     padding: 0 16px;
   }
   div.main {
     gap: 40px;
   }
 }
-
+/* 데스크탑 1280 */
 html,
 body {
   background-color: #f5f5dc;
@@ -174,11 +197,12 @@ body {
 }
 /* 전체 영역 */
 .resume-container {
-  width: 100%;
   max-width: 1280px;
   height: 100%;
   background-color: #f5f5dc;
+  /* border: 3px solid pink; */
   margin: 40px auto;
+  padding: 0 16px;
   position: relative;
 }
 /* <!-- 상단 뱃지모양 이름, 슬로건, 정보들 --> */
@@ -231,10 +255,10 @@ body {
   line-height: 1.5;
 }
 .line {
-  border: none;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   border-top: 1px solid #000;
-  width: 100%;
-  /* margin: 0; */
+  margin-top: 50px;
 }
 /* ----------------------- */
 /* 중간부분 이름, 이미지, 학력, 경험 */
@@ -257,11 +281,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px;
-  margin-top: 15px;
+  gap: 50px;
+  margin-top: 30px;
 }
 .photo {
-  max-width: 240px;
+  max-width: 300px;
   height: auto;
 }
 /* 학력, 겸험 */
@@ -306,16 +330,19 @@ body {
 .list-heading {
   font-size: 24px;
   font-weight: 600;
+  width: fit-content;
 }
 /* 자기 소개글 */
 .about-me {
   display: flex;
   flex-direction: column;
-
   align-items: center;
   gap: 12px;
   line-height: 1.8;
-  margin-top: 30px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 0 20px;
+  text-align: left;
 }
 .about-me-title {
   font-size: 24px;
@@ -325,14 +352,18 @@ body {
 .about-me-comment {
   max-width: 520px;
   font-size: 19px;
-  text-align: center;
+}
+.all-about-me-comment {
+  display: flex;
+  justify-content: flex-end;
+  gap: 60px;
 }
 /* 하단부분 프로젝트, 강점 */
 .footer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 40px;
+  margin-top: 30px;
   gap: 80px;
 }
 .footer-sub-title {
@@ -355,6 +386,8 @@ body {
 }
 .projects {
   line-height: 1.8;
+  width: 520px;
+  margin-left: 40px;
 }
 
 .projects-list:hover {
@@ -362,10 +395,13 @@ body {
   color: #c198f3;
 }
 /* 강점 */
+.strengths {
+  width: 520px;
+}
 .strengths-list-top {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .strengths-list-bottom {
   display: flex;
@@ -373,8 +409,8 @@ body {
   margin-top: 10px;
 }
 .strengths-item {
-  width: 90px;
-  height: 35px;
+  width: 110px;
+  height: 55px;
   border: 2px solid black;
   border-radius: 50px;
   display: flex;
@@ -382,6 +418,7 @@ body {
   align-items: center;
   transform: translateY(0);
   transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-out;
+  cursor: pointer;
 }
 .strengths-item:hover {
   transform: translateY(-10px);
@@ -390,17 +427,19 @@ body {
 /* 페이지 하단 버튼들 */
 .icon-box {
   display: flex;
-  gap: 5px;
-  bottom: 40px;
+  flex-direction: column;
+  gap: 10px;
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 50%;
+  transform: translateX(600px);
+  z-index: 9999;
 }
 .question-icon {
   width: 38px;
   height: 38px;
   color: gray;
-  opacity: 0.3;
+  opacity: 0.15;
   transform: scale(1);
   transition: transform 0.3s ease-in-out;
 }
@@ -415,7 +454,7 @@ body {
   width: 38px;
   height: 38px;
   color: white;
-  opacity: 0.3;
+  opacity: 0.15;
   border-radius: 100%;
   background-color: gray;
   transform: scale(1);
@@ -431,4 +470,15 @@ body {
 .end-comment {
   text-align: center;
   font-size: 13px;
+  height: 72px;
+}
+.end-comment-top {
+  margin-top: 30px;
+}
+.end-comment-under {
+  margin-top: 15px;
+}
+.bi-diamond-fill {
+  vertical-align: middle;
+  margin-right: 7px;
 }
