@@ -19,10 +19,10 @@
     gap: 10px;
     width: 364px;
     margin-bottom: 10px;
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
   }
   div.header-name {
-    width: 55px;
+    width: 60px;
     height: 60px;
     border: 2px solid black;
     font-size: 13px;
@@ -30,12 +30,12 @@
   }
   div.slogan {
     font-size: 15px;
-    width: 105px;
+    width: 115px;
+    font-weight: 500;
   }
 
   div.information {
     gap: 5px;
-    /* margin-top: 20px; */
   }
   div.info-title {
     font-size: 10px;
@@ -70,14 +70,28 @@
     width: 1px;
     height: 15px;
   }
+  p.list-a:not(:last-child)::after {
+    width: 1px;
+    height: 20px;
+  }
+  p.list-a {
+    font-size: 11px;
+    width: 70px;
+    padding: 8px 5px;
+  }
   p.list {
     font-size: 11px;
     width: 70px;
     padding: 0 5px;
   }
-  img.photo {
+  div.my-img {
     width: 100%;
+    /* max-width: 190px; */
     height: auto;
+  }
+  img.photo {
+    /* width: 100%; */
+    max-width: 205px;
   }
   /* -------------------------- */
   /* 자기소개 글 */
@@ -141,12 +155,15 @@
   }
 }
 
-/* 1024 이하 (태블릿)
+/* 1024 이하 (태블릿) */
 @media (max-width: 1024px) {
-  {
-
+  .resume-container {
+    padding: 0 16px;
   }
-} */
+  div.main {
+    gap: 40px;
+  }
+}
 
 html,
 body {
@@ -262,7 +279,12 @@ body {
   padding: 0 10px;
   font-size: 19px;
 }
-
+.list-a {
+  position: relative;
+  width: fit-content;
+  padding: 0 10px;
+  font-size: 19px;
+}
 .list:not(:last-child)::after {
   content: "";
   position: absolute;
