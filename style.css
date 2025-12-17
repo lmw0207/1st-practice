@@ -6,6 +6,7 @@
   font-display: swap;
 }
 @media (max-width: 768px) {
+  /* 전체 영역 */
   .resume-container {
     display: flex;
     flex-direction: column;
@@ -17,10 +18,11 @@
   /* 헤더 뱃지모양 이름, 슬로건, 정보 */
   div.header {
     gap: 10px;
-    width: 364px;
+    width: 100%;
   }
+
   div.header-name {
-    width: 60px;
+    width: 75px;
     height: 45px;
     border: 2px solid black;
     font-size: 13px;
@@ -28,7 +30,7 @@
   }
   div.slogan {
     font-size: 15px;
-    width: 115px;
+    width: 100%;
     font-weight: 500;
   }
 
@@ -124,6 +126,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0;
   }
   a.projects-list {
     font-size: 11px;
@@ -145,7 +148,7 @@
     align-items: center;
     max-width: 393px;
     /* flex-wrap: wrap; */
-    /* margin-right: 28px; */
+    margin: 0;
     gap: 10px;
   }
 
@@ -190,11 +193,59 @@
 
 /* 1024 이하 (태블릿) */
 @media (max-width: 1024px) {
+  /* 전체 영역 */
   div.resume-container {
     padding: 0 16px;
   }
+  /* 헤더 뱃지모양 이름, 슬로건, 정보 */
+  div.header {
+    gap: 10px;
+    width: 100%;
+  }
+
+  div.slogan {
+    font-size: 27px;
+    width: 100%;
+    font-weight: 500;
+  }
+  div.header-name {
+    width: 100px;
+    height: 55px;
+    border: 2px solid black;
+    font-size: 16px;
+    font-weight: 500;
+  }
   div.main {
+    gap: 60px;
+  }
+  /* 자기소개 글 */
+  div.about-me {
+    padding: 0;
+  }
+  span.about-me-comment {
+    width: 50%;
+    font-size: 19px;
+  }
+
+  div.all-about-me-comment {
+    display: flex;
     gap: 40px;
+  }
+
+  /* 하단부분 프로젝트, 강점 */
+  div.footer {
+    gap: 40px;
+  }
+  /* 프로젝트 */
+  div.projects {
+    width: 50%;
+    margin: 0;
+  }
+  /* 강점 */
+  div.strengths {
+    gap: 10px;
+    width: 50%;
+    margin: 0;
   }
 }
 /* 데스크탑 1280 */
@@ -242,7 +293,6 @@ body {
   font-size: 20px;
   font-style: italic;
   font-weight: 500;
-  position: sticky;
 }
 /* 슬로건 */
 .slogan {
@@ -347,6 +397,7 @@ body {
 .about-me {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   gap: 12px;
   line-height: 1.8;
@@ -372,7 +423,6 @@ body {
 /* 하단부분 프로젝트, 강점 */
 .footer {
   display: flex;
-  justify-content: center;
   align-items: flex-start;
   margin-top: 30px;
   gap: 80px;
@@ -398,7 +448,7 @@ body {
 .projects {
   line-height: 1.8;
   width: 520px;
-  margin-left: 40px;
+  margin-left: 70px;
 }
 
 .projects-list:hover {
@@ -408,6 +458,7 @@ body {
 /* 강점 */
 .strengths {
   width: 520px;
+  margin-right: 90px;
 }
 .strengths-list-top {
   display: flex;
