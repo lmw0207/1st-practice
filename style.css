@@ -176,6 +176,16 @@
   div.end-comment {
     font-size: 8px;
   }
+  hr.line {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    border-top: 1px solid #000;
+    margin-top: 50px;
+  }
+  .bi-diamond-fill {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 /* 1024 이하 (태블릿) */
@@ -194,6 +204,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "SchoolSafeBoardMarker";
+  overflow-x: hidden;
 }
 /* 전체 영역 */
 .resume-container {
