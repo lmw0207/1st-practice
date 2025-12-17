@@ -5,250 +5,8 @@
   font-weight: normal;
   font-display: swap;
 }
-@media (max-width: 768px) {
-  /* 전체 영역 */
-  .resume-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 16px;
-    max-width: 393px;
-  }
-  /* 헤더 뱃지모양 이름, 슬로건, 정보 */
-  div.header {
-    gap: 10px;
-    width: 100%;
-  }
 
-  div.header-name {
-    width: 75px;
-    height: 45px;
-    border: 2px solid black;
-    font-size: 13px;
-    font-weight: 500;
-  }
-  div.slogan {
-    font-size: 15px;
-    width: 100%;
-    font-weight: 500;
-  }
-
-  div.information {
-    gap: 5px;
-  }
-  div.info-title {
-    font-size: 10px;
-  }
-  div.info-content {
-    font-size: 10px;
-  }
-  /* -------------------------------- */
-  /* 영어, 한글 이름 */
-  div.main-name {
-    max-width: 290px;
-    height: 20px;
-    gap: 10px;
-  }
-  h2.english-name {
-    font-size: 30px;
-    width: 190px;
-  }
-  h2.korea-name {
-    font-size: 30px;
-    width: 85px;
-  }
-  /* ---------------------------- */
-  /* 중간부분 이미지, 학력, 경험 */
-  div.main {
-    gap: 15px;
-  }
-  h2.list-heading {
-    font-size: 16px;
-  }
-  p.list:not(:last-child)::after {
-    width: 1px;
-    height: 15px;
-  }
-  p.list-a:not(:last-child)::after {
-    width: 1px;
-    height: 20px;
-  }
-  p.list-a {
-    font-size: 11px;
-    width: 70px;
-    padding: 8px 5px;
-  }
-  p.list {
-    font-size: 11px;
-    width: 70px;
-    padding: 0 5px;
-  }
-  div.my-img {
-    /* width: 100%; */
-    width: 190px;
-    height: auto;
-  }
-  img.photo {
-    /* width: 100%; */
-    max-width: 205px;
-  }
-  /* -------------------------- */
-  /* 자기소개 글 */
-  h2.about-me-title {
-    font-size: 16px;
-  }
-  span.about-me-comment {
-    font-size: 14px;
-  }
-  div.all-about-me-comment {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  /* -------------------------- */
-  /* 하단부분 프로젝트, 강점 */
-  div.footer {
-    gap: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-  }
-  h3.footer-sub-title {
-    font-size: 13px;
-    margin-top: 5px;
-  }
-  /* 프로젝트 */
-  div.projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-  }
-  a.projects-list {
-    font-size: 11px;
-  }
-  svg.bi-notion {
-    width: 25px;
-    height: 25px;
-  }
-  svg.bi-github {
-    width: 25px;
-    height: 25px;
-  }
-  /* ----------------------------- */
-  /* 강점 */
-  div.strengths {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 393px;
-    /* flex-wrap: wrap; */
-    margin: 0;
-    gap: 10px;
-  }
-
-  li.strengths-item {
-    width: 80px;
-    height: 25px;
-    border: 2px solid black;
-    border-radius: 50px;
-  }
-  button.question-icon {
-    width: 25px;
-    height: 25px;
-  }
-  svg.bi-question-circle-fill {
-    width: 25px;
-    height: 25px;
-  }
-  button.up-icon {
-    width: 25px;
-    height: 25px;
-  }
-  svg.bi-chevron-bar-up {
-    width: 25px;
-    height: 25px;
-  }
-  /* ------------------------------ */
-  /* 제일 바닥 글귀 */
-  div.end-comment {
-    font-size: 8px;
-  }
-  hr.line {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    border-top: 1px solid #000;
-    margin-top: 50px;
-  }
-  .bi-diamond-fill {
-    width: 10px;
-    height: 10px;
-  }
-}
-
-/* 1024 이하 (태블릿) */
-@media (max-width: 1024px) {
-  /* 전체 영역 */
-  div.resume-container {
-    padding: 0 16px;
-  }
-  /* 헤더 뱃지모양 이름, 슬로건, 정보 */
-  div.header {
-    gap: 10px;
-    width: 100%;
-  }
-
-  div.slogan {
-    font-size: 27px;
-    width: 100%;
-    font-weight: 500;
-  }
-  div.header-name {
-    width: 100px;
-    height: 55px;
-    border: 2px solid black;
-    font-size: 16px;
-    font-weight: 500;
-  }
-  div.main {
-    gap: 60px;
-  }
-  /* 자기소개 글 */
-  div.about-me {
-    padding: 0;
-  }
-  span.about-me-comment {
-    width: 50%;
-    font-size: 19px;
-  }
-
-  div.all-about-me-comment {
-    display: flex;
-    gap: 40px;
-  }
-
-  /* 하단부분 프로젝트, 강점 */
-  div.footer {
-    gap: 40px;
-  }
-  /* 프로젝트 */
-  div.projects {
-    width: 50%;
-    margin: 0;
-  }
-  /* 강점 */
-  div.strengths {
-    gap: 10px;
-    width: 50%;
-    margin: 0;
-  }
-}
-/* 데스크탑 1280 */
+/* 데스크탑 1024 ~ */
 html,
 body {
   background-color: #f5f5dc;
@@ -426,6 +184,7 @@ body {
   align-items: flex-start;
   margin-top: 30px;
   gap: 80px;
+  /* padding: 0 75px; */
 }
 .footer-sub-title {
   font-size: 18px;
@@ -448,7 +207,6 @@ body {
 .projects {
   line-height: 1.8;
   width: 520px;
-  margin-left: 70px;
 }
 
 .projects-list:hover {
@@ -458,7 +216,6 @@ body {
 /* 강점 */
 .strengths {
   width: 520px;
-  margin-right: 90px;
 }
 .strengths-list-top {
   display: flex;
@@ -543,4 +300,252 @@ body {
 .bi-diamond-fill {
   vertical-align: middle;
   margin-right: 7px;
+}
+
+@media (max-width: 767px) {
+  /* 전체 영역 */
+  .resume-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    max-width: 393px;
+  }
+  /* 헤더 뱃지모양 이름, 슬로건, 정보 */
+  div.header {
+    gap: 10px;
+    width: 100%;
+  }
+
+  div.header-name {
+    width: 70px;
+    height: 50px;
+    border: 2px solid black;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  div.slogan {
+    font-size: 15px;
+    width: 100%;
+    font-weight: 500;
+  }
+
+  div.information {
+    gap: 5px;
+  }
+  div.info-title {
+    font-size: 10px;
+  }
+  div.info-content {
+    font-size: 10px;
+  }
+  /* -------------------------------- */
+  /* 영어, 한글 이름 */
+  div.main-name {
+    max-width: 290px;
+    height: 20px;
+    gap: 10px;
+  }
+  h2.english-name {
+    font-size: 30px;
+    width: 190px;
+  }
+  h2.korea-name {
+    font-size: 30px;
+    width: 85px;
+  }
+  /* ---------------------------- */
+  /* 중간부분 이미지, 학력, 경험 */
+  div.main {
+    gap: 15px;
+  }
+  h2.list-heading {
+    font-size: 16px;
+  }
+  p.list:not(:last-child)::after {
+    width: 1px;
+    height: 15px;
+  }
+  p.list-a:not(:last-child)::after {
+    width: 1px;
+    height: 20px;
+  }
+  p.list-a {
+    font-size: 11px;
+    width: 70px;
+    padding: 8px 5px;
+  }
+  p.list {
+    font-size: 11px;
+    width: 70px;
+    padding: 0 5px;
+  }
+  div.my-img {
+    /* width: 100%; */
+    width: 190px;
+    height: auto;
+  }
+  img.photo {
+    /* width: 100%; */
+    max-width: 100%;
+    height: auto;
+  }
+  /* -------------------------- */
+  /* 자기소개 글 */
+  h2.about-me-title {
+    font-size: 16px;
+  }
+  span.about-me-comment {
+    font-size: 14px;
+    width: 100%;
+  }
+  div.all-about-me-comment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  /* -------------------------- */
+  /* 하단부분 프로젝트, 강점 */
+  div.footer {
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 50px;
+  }
+  h3.footer-sub-title {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  /* 프로젝트 */
+  div.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  a.projects-list {
+    font-size: 11px;
+  }
+  svg.bi-notion {
+    width: 25px;
+    height: 25px;
+  }
+  svg.bi-github {
+    width: 25px;
+    height: 25px;
+  }
+  /* ----------------------------- */
+  /* 강점 */
+  div.strengths {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 393px;
+    /* flex-wrap: wrap; */
+    margin: 0;
+    gap: 10px;
+  }
+
+  li.strengths-item {
+    width: 80px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 50px;
+  }
+  button.question-icon {
+    width: 25px;
+    height: 25px;
+  }
+  svg.bi-question-circle-fill {
+    width: 25px;
+    height: 25px;
+  }
+  button.up-icon {
+    width: 25px;
+    height: 25px;
+  }
+  svg.bi-chevron-bar-up {
+    width: 25px;
+    height: 25px;
+  }
+  /* ------------------------------ */
+  /* 제일 바닥 글귀 */
+  div.end-comment {
+    font-size: 8px;
+  }
+  hr.line {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    border-top: 1px solid #000;
+    margin-top: 50px;
+  }
+  .bi-diamond-fill {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* 768 이상 1024 이하 (태블릿) */
+@media (min-width: 768px) and(max-width: 1024px) {
+  /* 전체 영역 */
+  div.resume-container {
+    padding: 0 16px;
+  }
+  /* 헤더 뱃지모양 이름, 슬로건, 정보 */
+  div.header {
+    gap: 10px;
+    width: 100%;
+  }
+
+  div.slogan {
+    font-size: 27px;
+    width: 100%;
+    font-weight: 500;
+  }
+  div.header-name {
+    width: 100px;
+    height: 55px;
+    border: 2px solid black;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  div.main {
+    gap: 60px;
+  }
+  /* 자기소개 글 */
+  div.about-me {
+    padding: 0;
+  }
+
+  span.about-me-comment {
+    max-width: 50%;
+    font-size: 19px;
+  }
+
+  div.all-about-me-comment {
+    display: flex;
+    gap: 40px;
+  }
+
+  /* 하단부분 프로젝트, 강점 */
+  div.footer {
+    gap: 80px;
+  }
+  /* 프로젝트 */
+  div.projects {
+    width: 100%;
+  }
+  /* 강점 */
+  div.strengths {
+    gap: 10px;
+    width: 50%;
+    margin: 0;
+  }
 }
