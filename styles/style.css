@@ -543,7 +543,6 @@ body {
   }
 
   div.all-about-me-comment {
-    display: flex;
     width: 50%;
     gap: 40px;
   }
