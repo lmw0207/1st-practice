@@ -16,42 +16,54 @@ body {
   overflow-x: hidden;
 }
 /* 전체 영역 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .resume-container {
   max-width: 1280px;
   height: 100%;
   background-color: #f5f5dc;
-  /* border: 3px solid pink; */
   margin: 50px auto;
   padding: 0 16px;
   position: relative;
+  opacity: 0;
+  animation: fadeInUp 3s ease-out forwards;
 }
-/* <!-- 상단 뱃지모양 이름, 슬로건, 정보들 --> */
+/* <!-- 상단 슬로건, 정보들 --> */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  gap: 50px;
+  gap: 80px;
+  border: 4px solid black;
+  width: 100%;
+  height: auto;
+  padding: 20px 20px;
+  border-radius: 50px;
+  background-color: #f4f1ec;
+  transform: translateY(0);
+  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-out;
+  cursor: pointer;
 }
+.header:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25);
+  background-color: #aca08c;
+}
+
 .header-content {
   display: flex;
-  flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
 }
-/* 뱃지 모양 이름 */
-.header-name {
-  width: 141px;
-  height: 65px;
-  border: 3px solid black;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  font-style: italic;
-  font-weight: 500;
-}
+
 /* 슬로건 */
 .slogan {
   font-size: 30px;
@@ -62,9 +74,8 @@ body {
 .information {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: end;
   gap: 30px;
-  /* margin-top: 20px; */
 }
 .info-title {
   font-weight: 800;
@@ -100,12 +111,36 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 60px;
   margin-top: 30px;
-}
-.photo {
-  max-width: 300px;
+  border: 4px solid black;
+  width: 100%;
   height: auto;
+  padding: 20px 20px;
+  border-radius: 50px;
+}
+.my-img {
+  width: 100%;
+  max-width: 350px;
+  height: 500px;
+  text-align: left;
+  border: 4px solid black;
+  border-radius: 50px;
+  overflow: hidden;
+  transform: scale(1) rotate(0deg);
+  transition: 0.4s ease-in-out, transform 0.4s ease-out;
+  transform: translateY(0);
+  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-out;
+}
+.my-img:hover {
+  transform: rotate(-10deg);
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.35);
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 /* 학력, 겸험 */
 .main-content {
@@ -115,6 +150,8 @@ body {
 }
 .p-plus {
   display: flex;
+  width: fit-content;
+  height: fit-content;
 }
 .list {
   position: relative;
@@ -139,12 +176,54 @@ body {
   background-color: black;
 }
 
+.list-a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 15px;
+  background-color: black;
+}
 .education-list {
   line-height: 1.8;
+  width: 0%;
+  text-align: left;
+  border: 4px solid black;
+  width: 100%;
+  height: 230px;
+  padding: 20px 20px;
+  border-radius: 50px;
+  background-color: #f4f1ec;
+  transform: translateY(0);
+  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-out;
+  cursor: pointer;
 }
-.experience {
+.education-list:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.35);
+  background-color: #aca08c;
+}
+.experience-list {
   margin-top: 40px;
   line-height: 1.8;
+  width: 50%;
+  text-align: left;
+  border: 4px solid black;
+  width: 100%;
+  height: 230px;
+  padding: 20px 20px;
+  border-radius: 50px;
+  background-color: #f4f1ec;
+  transform: translateY(0);
+  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-out;
+  cursor: pointer;
+}
+.experience-list:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.35);
+  background-color: #aca08c;
 }
 .list-heading {
   font-size: 24px;
@@ -160,22 +239,44 @@ body {
   gap: 12px;
   line-height: 1.8;
   width: 100%;
-  margin: 20px auto;
+  margin-top: 40px;
   text-align: left;
+  border: 4px solid black;
+  width: 100%;
+  height: auto;
+  padding: 20px 20px;
+  border-radius: 50px;
 }
 .about-me-title {
   font-size: 24px;
   font-weight: 600;
-  margin-top: 30px;
 }
 
 .about-me-comment {
   width: 50%;
   font-size: 19px;
+  border: 4px solid black;
+  width: 100%;
+  height: 250px;
+  padding: 16px 16px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  background-color: #f4f1ec;
+  transform: translateY(0);
+  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-out;
+  cursor: pointer;
+}
+.about-me-comment:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25);
+  background-color: #aca08c;
 }
 .all-about-me-comment {
   display: flex;
   justify-content: flex-end;
+
+  align-items: center;
   gap: 60px;
 }
 .container {
@@ -191,6 +292,13 @@ body {
   margin-top: 30px;
   width: 100%;
   gap: 60px;
+  width: 100%;
+  margin-top: 40px;
+  text-align: left;
+  border: 4px solid black;
+  height: auto;
+  padding: 20px 20px;
+  border-radius: 50px;
 }
 .footer-sub-title {
   font-size: 18px;
@@ -202,26 +310,55 @@ body {
   max-width: 300px;
 }
 .bi-github {
-  background-color: #2c2c2c;
-  color: white;
   border-radius: 100%;
   border: 1px solid #f0f6fc;
   width: 40px;
   height: 40px;
   outline: none;
 }
+/* 프로젝트 */
 .projects {
   line-height: 1.8;
   width: 50%;
+  text-align: left;
+  border: 4px solid black;
+  width: 100%;
+  height: 280px;
+  padding: 20px 20px;
+  border-radius: 50px;
+  background-color: #f4f1ec;
+  transform: translateY(0);
+  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-out;
+  cursor: pointer;
+}
+.projects:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25);
+  background-color: #aca08c;
 }
 
 .projects-list:hover {
   text-decoration: underline;
-  color: #c198f3;
+  color: white;
 }
 /* 강점 */
 .strengths {
   width: 50%;
+  text-align: left;
+  border: 4px solid black;
+  width: 100%;
+  height: 280px;
+  padding: 20px 20px;
+  border-radius: 50px;
+  background-color: #f4f1ec;
+  transform: translateY(0);
+  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-out;
+  cursor: pointer;
+}
+.strengths:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25);
+  background-color: #aca08c;
 }
 .strengths-list-top {
   display: flex;
@@ -234,9 +371,9 @@ body {
   margin-top: 25px;
 }
 .strengths-item {
-  width: 110px;
-  height: 55px;
-  border: 2px solid black;
+  width: 150px;
+  height: 50px;
+  border: 3px solid black;
   border-radius: 50px;
   display: flex;
   justify-content: center;
@@ -323,20 +460,13 @@ body {
     padding: 0 16px;
     max-width: 767px;
   }
-  /* 헤더 뱃지모양 이름, 슬로건, 정보 */
+  /* 헤더 슬로건, 정보들 */
   div.header {
-    gap: 10px;
+    gap: 8px;
     width: 100%;
+    padding: 8px;
   }
 
-  div.header-name {
-    width: 70px;
-    height: 40px;
-    border: 2px solid black;
-    font-size: 11px;
-    padding: 8px 15px;
-    white-space: nowrap;
-  }
   div.slogan {
     font-size: 17px;
     width: 100%;
@@ -349,8 +479,9 @@ body {
     font-size: 10px;
   }
   div.info-content {
-    font-size: 10px;
+    font-size: 9px;
   }
+
   /* -------------------------------- */
   /* 영어, 한글 이름 */
   div.main-name {
@@ -368,11 +499,19 @@ body {
   }
   /* ---------------------------- */
   /* 중간부분 이미지, 학력, 경험 */
+
   div.main {
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 40px;
+  }
+  .main-content {
+    width: 100%;
   }
   h2.list-heading {
-    font-size: 14px;
+    font-size: 20px;
+    margin-bottom: 10px;
   }
   p.list:not(:last-child)::after {
     width: 1px;
@@ -380,32 +519,41 @@ body {
   }
   p.list-a:not(:last-child)::after {
     width: 1px;
-    height: 20px;
+    height: 15px;
+    margin-top: -13px;
   }
   p.list-a {
-    font-size: 11px;
-    width: 70px;
-    padding: 8px 5px;
+    font-size: 13px;
+    width: 130px;
+    padding: 0px 5px;
+    height: fit-content;
+    display: flex;
+    flex: 1;
   }
   p.list {
-    font-size: 11px;
-    width: 70px;
+    font-size: 13px;
     padding: 0 5px;
+    height: fit-content;
+    display: flex;
   }
+  div.p-plus {
+    display: flex;
+    width: 250px;
+    height: fit-content;
+  }
+
   div.my-img {
-    /* width: 100%; */
-    width: 190px;
-    height: auto;
+    width: 100%;
+    height: 50%;
   }
   img.photo {
-    /* width: 100%; */
     max-width: 100%;
     height: auto;
   }
   /* -------------------------- */
   /* 자기소개 글 */
   h2.about-me-title {
-    font-size: 16px;
+    font-size: 17px;
   }
   span.about-me-comment {
     font-size: 14px;
@@ -471,6 +619,14 @@ body {
     height: 25px;
     border: 2px solid black;
     border-radius: 50px;
+    gap: 15px;
+  }
+  ul.strengths-list-top {
+    gap: 15px;
+    margin-top: 20px;
+  }
+  ul.strengths-list-bottom {
+    gap: 15px;
   }
   button.question-icon {
     width: 25px;
@@ -507,13 +663,18 @@ body {
     width: 10px;
     height: 10px;
   }
+  .bi-house,
+  .bi-telephone,
+  .bi-envelope {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 /* 768 이상 1024 이하 (태블릿) */
 @media (min-width: 768px) and (max-width: 1023px) {
   /* 전체 영역 */
   div.resume-container {
-    /* padding: 0 1px; */
     max-width: 1023px;
     min-width: 768px;
   }
@@ -526,14 +687,7 @@ body {
   div.slogan {
     font-size: 24px;
     width: 100%;
-  }
-  div.header-name {
-    width: 110px;
-    height: 55px;
-    border: 2px solid black;
-    font-size: 16px;
-    padding: 8px 15px;
-    white-space: nowrap;
+    padding: 0;
   }
   div.information {
     gap: 10px;
@@ -542,12 +696,23 @@ body {
   div.main {
     gap: 60px;
   }
+  p.list,
+  p.list-a {
+    font-size: 16px;
+  }
+
+  div.education-list,
+  div.experience-list {
+    padding: 10px;
+  }
+
   /* 자기소개 글 */
   span.about-me-comment {
     display: flex;
     width: 100%;
     flex: 1;
-    font-size: 19px;
+    font-size: 16px;
+    padding: 8px;
   }
 
   div.all-about-me-comment {
@@ -560,14 +725,15 @@ body {
   /* 하단부분 프로젝트, 강점 */
   div.footer {
     gap: 50px;
+    flex: 1;
   }
   /* 프로젝트 */
   div.projects {
-    width: 100%;
+    width: 50%;
   }
   /* 강점 */
   div.strengths {
     gap: 10px;
-    width: 100%;
+    width: 50%;
   }
 }
