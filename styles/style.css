@@ -160,13 +160,14 @@ body {
   gap: 12px;
   line-height: 1.8;
   width: 100%;
-  margin: 30px auto;
+  margin: 20px auto;
   padding: 0 20px;
   text-align: left;
 }
 .about-me-title {
   font-size: 24px;
   font-weight: 600;
+  margin-top: 30px;
 }
 
 .about-me-comment {
@@ -178,11 +179,18 @@ body {
   justify-content: flex-end;
   gap: 60px;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* 하단부분 프로젝트, 강점 */
 .footer {
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   margin-top: 30px;
+  width: 100%;
   gap: 60px;
 }
 .footer-sub-title {
@@ -205,7 +213,7 @@ body {
 }
 .projects {
   line-height: 1.8;
-  width: 520px;
+  width: 50%;
 }
 
 .projects-list:hover {
@@ -214,7 +222,7 @@ body {
 }
 /* 강점 */
 .strengths {
-  width: 520px;
+  width: 50%;
 }
 .strengths-list-top {
   display: flex;
@@ -299,6 +307,9 @@ body {
 .bi-diamond-fill {
   vertical-align: middle;
   margin-right: 7px;
+}
+.bi-arrow-return-right {
+  margin-top: 5px;
 }
 
 @media (max-width: 767px) {
@@ -405,6 +416,9 @@ body {
     align-items: center;
     gap: 15px;
   }
+  div.container {
+    width: 100%;
+  }
   /* -------------------------- */
   /* 하단부분 프로젝트, 강점 */
   div.footer {
@@ -489,13 +503,17 @@ body {
     width: 10px;
     height: 10px;
   }
+  .bi-arrow-return-right {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 /* 768 이상 1024 이하 (태블릿) */
 @media (min-width: 768px) and(max-width: 1024px) {
   /* 전체 영역 */
   div.resume-container {
-    padding: 0 16px;
+    padding: 0 40px;
   }
   /* 헤더 뱃지모양 이름, 슬로건, 정보 */
   div.header {
@@ -519,23 +537,23 @@ body {
     gap: 60px;
   }
   /* 자기소개 글 */
-  div.about-me {
-    padding: 0;
-  }
-
   span.about-me-comment {
-    max-width: 50%;
+    width: 50%;
     font-size: 19px;
   }
 
   div.all-about-me-comment {
     display: flex;
+    width: 50%;
     gap: 40px;
+  }
+  div.container {
+    display: flex;
   }
 
   /* 하단부분 프로젝트, 강점 */
   div.footer {
-    gap: 80px;
+    gap: 50px;
   }
   /* 프로젝트 */
   div.projects {
@@ -544,7 +562,6 @@ body {
   /* 강점 */
   div.strengths {
     gap: 10px;
-    width: 50%;
-    margin: 0;
+    width: 100%;
   }
 }
