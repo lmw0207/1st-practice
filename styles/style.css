@@ -231,7 +231,7 @@ body {
 .strengths-list-bottom {
   display: flex;
   gap: 30px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 .strengths-item {
   width: 110px;
@@ -429,7 +429,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 10px;
-    gap: 50px;
+    gap: 40px;
   }
   h3.footer-sub-title {
     font-size: 13px;
@@ -461,8 +461,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 393px;
-    /* flex-wrap: wrap; */
+    width: 100%;
     margin: 0;
     gap: 10px;
   }
