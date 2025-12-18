@@ -257,7 +257,7 @@ body {
   position: fixed;
   bottom: 20px;
   left: 50%;
-  transform: translateX(600px);
+  transform: translateX(900px);
   z-index: 9999;
 }
 .question-icon {
