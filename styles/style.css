@@ -21,7 +21,7 @@ body {
   height: 100%;
   background-color: #f5f5dc;
   /* border: 3px solid pink; */
-  margin: 30px auto;
+  margin: 50px auto;
   padding: 0 16px;
   position: relative;
 }
@@ -161,7 +161,6 @@ body {
   line-height: 1.8;
   width: 100%;
   margin: 20px auto;
-  padding: 0 20px;
   text-align: left;
 }
 .about-me-title {
@@ -171,7 +170,7 @@ body {
 }
 
 .about-me-comment {
-  max-width: 520px;
+  width: 50%;
   font-size: 19px;
 }
 .all-about-me-comment {
@@ -226,13 +225,13 @@ body {
 }
 .strengths-list-top {
   display: flex;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 30px;
+  margin-top: 30px;
 }
 .strengths-list-bottom {
   display: flex;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 30px;
+  margin-top: 20px;
 }
 .strengths-item {
   width: 110px;
@@ -306,10 +305,12 @@ body {
 }
 .bi-diamond-fill {
   vertical-align: middle;
-  margin-right: 7px;
+  margin-right: 4px;
+  margin-left: 4px;
 }
 .bi-arrow-return-right {
-  margin-top: 5px;
+  vertical-align: middle;
+  margin-right: 5px;
 }
 
 @media (max-width: 767px) {
@@ -320,7 +321,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0 16px;
-    max-width: 393px;
+    max-width: 767px;
   }
   /* 헤더 뱃지모양 이름, 슬로건, 정보 */
   div.header {
@@ -332,7 +333,7 @@ body {
     width: 70px;
     height: 50px;
     border: 2px solid black;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 500;
   }
   div.slogan {
@@ -368,10 +369,10 @@ body {
   /* ---------------------------- */
   /* 중간부분 이미지, 학력, 경험 */
   div.main {
-    gap: 15px;
+    gap: 10px;
   }
   h2.list-heading {
-    font-size: 16px;
+    font-size: 14px;
   }
   p.list:not(:last-child)::after {
     width: 1px;
@@ -510,10 +511,12 @@ body {
 }
 
 /* 768 이상 1024 이하 (태블릿) */
-@media (min-width: 768px) and(max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   /* 전체 영역 */
   div.resume-container {
-    padding: 0 40px;
+    /* padding: 0 1px; */
+    max-width: 1023px;
+    min-width: 768px;
   }
   /* 헤더 뱃지모양 이름, 슬로건, 정보 */
   div.header {
@@ -538,12 +541,13 @@ body {
   }
   /* 자기소개 글 */
   span.about-me-comment {
-    width: 50%;
+    display: flex;
+    width: 100%;
+    flex: 1;
     font-size: 19px;
   }
 
   div.all-about-me-comment {
-    width: 50%;
     gap: 40px;
   }
   div.container {
