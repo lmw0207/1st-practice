@@ -331,15 +331,15 @@ body {
 
   div.header-name {
     width: 70px;
-    height: 50px;
+    height: 40px;
     border: 2px solid black;
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 11px;
+    padding: 8px 15px;
+    white-space: nowrap;
   }
   div.slogan {
-    font-size: 15px;
+    font-size: 17px;
     width: 100%;
-    font-weight: 500;
   }
 
   div.information {
@@ -415,7 +415,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
   }
   div.container {
     width: 100%;
@@ -520,21 +520,25 @@ body {
   }
   /* 헤더 뱃지모양 이름, 슬로건, 정보 */
   div.header {
-    gap: 10px;
+    gap: 20px;
     width: 100%;
   }
 
   div.slogan {
-    font-size: 27px;
+    font-size: 24px;
     width: 100%;
-    font-weight: 500;
   }
   div.header-name {
-    width: 100px;
+    width: 110px;
     height: 55px;
     border: 2px solid black;
     font-size: 16px;
-    font-weight: 500;
+    padding: 8px 15px;
+    white-space: nowrap;
+  }
+  div.information {
+    gap: 10px;
+    font-size: 14px;
   }
   div.main {
     gap: 60px;
